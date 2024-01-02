@@ -1,0 +1,28 @@
+Fonction dot_product(v1, v2):
+    Si Longueur(v1) ≠ Longueur(v2):
+        Retourner "Les vecteurs ne sont pas de la même dimension."
+    
+    ps <- 0
+    Pour i de 1 à Longueur(v1):
+        ps <- ps + (v1[i] * v2[i])
+    
+    Retourner ps 
+Algorithme determine_orthogonalite(n, vecteurs):
+    Pour chaque couple de vecteurs (v1, v2) parmi les n couples:
+        ps <- dot_product(v1, v2)
+        Si ps = 0:
+            Afficher "Les vecteurs", v1, "et", v2, "sont orthogonaux."
+        Sinon:
+            Afficher "Les vecteurs", v1, "et", v2, "ne sont pas orthogonaux."
+
+    Algorithme tri_par_insertion(tableau):
+    Pour i de 1 à Longueur(tableau):
+        element_a_inserer <- tableau[i]
+        j <- i - 1
+        
+        Tant que j >= 0 et tableau[j] > element_a_inserer:
+            tableau[j + 1] <- tableau[j]
+            j <- j - 1
+        
+        tableau[j + 1] <- element_a_inserer                                                                 
+                                                                                                                                                                                                 
